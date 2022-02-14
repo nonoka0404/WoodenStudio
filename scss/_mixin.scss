@@ -1,0 +1,13 @@
+// map : sassの辞書型リスト
+
+$breakpoint:(
+    sp:'screen and (max-width:599px)',
+    tab:'screen and (max-width:1024px)',
+    pc:'screen and (min-width:1025px)',
+);
+
+@mixin mq($size) {
+    @media #{map-get($breakpoint, $size)}{
+        @content;
+    }
+}

@@ -1,0 +1,633 @@
+@use "reset";
+@use "variables" as *;
+@use "mixin" as *;
+@use "header";
+@use "footer";
+@use "modules";
+@use "common";
+@use "drawer";
+
+
+
+.page-wrap {
+    display: flex;
+    @include mq(sp){
+        display: initial;
+    }
+}
+
+.main-visual {
+    background: url(../img/photo01.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: calc(100vw - 160px);
+    margin-bottom: 288px;
+    @include mq(sp){
+        height: 50vh;
+        width: 100%;
+        margin-bottom: 96px;
+    }
+}
+
+.products {
+    .section-headline {
+        text-align: center;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 54px;
+        @include mq(sp){
+            margin-top: 32px;
+        }
+    }
+
+    &-content {
+        width: 50%;
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+.recommend {
+    .section-headline {
+        text-align: center;
+    }
+
+    &-wrap {
+        max-width: 1080px;
+        margin: 54px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 36px;
+        @include mq(sp){
+            max-width: initial;
+            margin: 32px auto 0;
+            padding: 0 20px;
+            row-gap: 24px;
+            .article {
+                width: 49%;
+            }
+        }
+    }
+
+    &-content {
+        .img-box{
+            background-color: $main;
+            overflow: hidden;
+        }
+
+        &__img {
+            height: 200px;
+            width: 300px;
+            display: inline-block;
+            transition: all 0.8s ease;
+
+            &:hover{
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+
+            @include mq(sp){
+                height: initial;
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font-family: $serif;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        &__price {
+            font-family: $serif;
+        }
+    }
+
+    .btn {
+        margin: 72px auto 0;
+        @include mq(sp){
+            margin-top: 32px;
+        }
+    }
+}
+
+.concept {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @include mq(sp){
+        max-width: initial;
+    }
+    .section-headline{
+        @include mq(sp){
+            margin-left: 20px;
+        }
+    }
+    &1 {
+        position: relative;
+        height: 450px;
+        margin-bottom: 90px;
+        @include mq(sp){
+            position: initial;
+            height: initial;
+            margin-bottom: 36px;
+            background-color: $sub;
+            margin-top: 32px;
+            margin-right: 20px;
+            padding-top: 20px;
+            padding-right: 20px;
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            @include mq(sp){
+                position: initial;
+                width: 100%;
+            }
+        }
+        &-wrap {
+            background-color: $sub;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 360px;
+            width: 920px;
+            padding: 70px 56px;
+            z-index: -1;
+            @include mq(sp){
+                background-color: initial;
+                position: initial;
+                bottom: initial;
+                left: initial;
+                height: initial;
+                width: initial;
+                padding: initial;
+                z-index: initial;
+                padding: 20px 0 20px 20px;
+            }
+        }
+        &__headline {
+            color: $white;
+            font-weight: bold;
+            margin-bottom: 28px;
+            @include mq(sp){
+                font-family: $serif;
+                margin-bottom: 20px;
+            }
+        }
+        &__text {
+            color: $white;
+            font-family: $sans;
+            line-height: 2;
+            @include mq(sp){
+                line-height: 1.8;
+            }
+        }
+    }
+    &2 {
+        position: relative;
+        margin-left: 20px;
+
+        &__img {
+            width: 50%;
+            @include mq(sp){
+                width: 100%;
+            }
+        }
+        &-wrap {
+            position: absolute;
+            left: 428px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include mq(sp){
+                position: initial;
+                left: initial;
+                top: initial;
+                transform: initial;
+            }
+        }
+        &__headline {
+            font-weight: bold;
+            margin-bottom: 28px;
+            @include mq(sp){
+                font-family: $serif;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+        }
+        &__text {
+            font-family: $sans;
+            line-height: 2;
+            @include mq(sp){
+                line-height: 1.8;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+
+.news {
+    background: url(../img/newsBackground.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 54px 0;
+    .section-headline {
+        padding: initial;
+        text-align: center;
+
+    }
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 640px;
+        margin: 36px auto 0;
+        @include mq(sp){
+            display: block;
+            margin: 32px auto 0;
+            max-width: 288px;
+        }
+    }
+    &-content {
+        margin-bottom: 36px;
+        @include mq(sp){
+            margin-bottom: 24px;
+        }
+
+        &__date {
+            font-family: $sans;
+            font-size: 12px;
+            margin-bottom: 8px;
+            @include mq(sp){
+                font-size: 10px;
+                margin-bottom: 4px;
+            }
+        }
+        &__title{
+            font-family: $sans;
+            margin-bottom: 8px;
+            @include mq(sp){
+                margin-bottom: 4px;
+            }
+        }
+        &__line {
+            background-color: $black;
+            height: 1px;
+            width: 288px;
+        }
+    }
+    .btn {
+        margin: 0 auto;
+        margin-top: 28px;
+        @include mq(sp){
+            margin-top: 32px;
+        }
+    }
+}
+
+.contact {
+    max-width: 1080px;
+    margin: 0 auto;
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
+    &-wrap {
+        height: 468px;
+        position: relative;
+        @include mq(sp){
+            height: initial;
+            margin-top: 32px;
+        }
+        &::after {
+            background-color: $sub;
+            content: "";
+            height: 405px;
+            width: calc(((100vw - 160px) / 2) - 63px);
+            position: absolute;
+            bottom: 0;
+            left: calc(50% + 63px);
+            z-index: -1;
+
+            @include mq(sp){
+                bottom: initial;
+                left: initial;
+                width: calc(100vw - 80px);
+                height: calc((100vw - 80px) / 4 * 3);
+                top: 40px;
+                right: 0;
+            }
+        }
+    }
+    &__img {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq(sp){
+            position: initial;
+            width: calc(100% - 40px);
+        }
+    }
+    &-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include mq(sp){
+            position: initial;
+            transform: initial;
+            margin-top: 72px;
+        }
+    }
+    &__headline {
+        font-weight: bold;
+        margin-bottom: 28px;
+        @include mq(sp){
+            font-family: $serif;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        font-family: $sans;
+        line-height: 2;
+        @include mq(sp){
+            line-height: 1.8;
+        }
+    }
+    .btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include mq(sp){
+            position: relative;
+            bottom: initial;
+            left: initial;
+            margin-top: 32px;
+        }
+    }
+}
+
+.product-page{
+    width: calc( 100vw - 160px);
+    @include mq(sp){
+        width: calc(100vw - 40px);
+        margin: 0 auto;
+    }
+}
+
+.product-article {
+    display: flex;
+    max-width: 1080px;
+    margin: 170px auto 70px;
+    @include mq(sp){
+        display: initial;
+        max-width: initial;
+        margin: initial;
+    }
+
+    &__img {
+        width: 50%;
+        @include mq(sp){
+            width: 100%;
+            margin-bottom: 32px;
+        }
+    }
+
+    .product-wrap {
+        margin-left: 40px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        @include mq(sp){
+            width: 100%;
+            margin: 0 auto;
+            .product-name {
+                margin-bottom: 48px;
+            }
+        }
+
+        .product__num {
+            font-family: $caslon;
+            font-size: 16px;
+
+            @include mq(sp){
+                font-size: 12px;
+            }
+        }
+        .product__title {
+            font-family: $serif;
+            font-size: 28px;
+            @include mq(sp){
+                font-size: 20px;
+            }
+        }
+        .product__price {
+            font-family: $serif;
+            font-size: 24px;
+            @include mq(sp){
+                font-size: 18px;
+            }
+            .price-tax{
+                font-size: 12px;
+                @include mq(sp){
+                    font-size: 10px;
+                }
+            }
+        }
+        .product-choice {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid $black;
+
+            &-sp{
+                display: flex;
+            }
+
+            @include mq(sp) {
+                display: initial;
+                justify-content: initial;
+                margin-bottom: 24px;
+            }
+
+            .choice-color__text {
+                font-family: $sans;
+                line-height: 32px;
+                margin-right: 16px;
+            }
+            .choice-color{
+                display: flex;
+                &__visual {
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    
+                    &-green {
+                        background-color: $green;
+                    }
+                    &-blue {
+                        background-color: $blue;
+                    }
+                    &-brown {
+                        background-color: $brown;
+                    }
+            }
+            }
+            .choice-size__text {
+                font-family: $sans;
+                line-height: 32px;
+            }
+        }
+        .product-detail {
+            font-family: $sans;
+            font-size: 14px;
+            line-height: 28px;
+            @include mq(sp){
+                font-size: 12px;
+                line-height: 1.8;
+            }
+        }
+    } 
+}
+
+.btn-wrap {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @include mq(sp){
+        max-width: initial;
+        position: initial;
+        margin: initial;
+        width: 100%;
+    }
+
+    .product-contact {
+        position: absolute;
+        right: 0;
+
+        @include mq(sp){
+            max-width: initial;
+            right: initial;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+.contact-vidual {
+    background: url(../img/photo010.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 603px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &::after{
+        content: "";
+        height: 100vh;
+        width: 603px;
+        background-color: rgba(110, 85, 27, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+
+}
+
+.contact-title {
+    &__sub {
+        text-align: center;
+        color: $white;
+        font-family: $serif;
+        font-size: 14px;
+        margin-bottom: 10px;  
+        z-index: 1;
+    }
+    &__main {
+        text-align: center;
+        color: $white;
+        font-family: $serif;
+        font-size: 36px;
+        z-index: 1;
+    }
+}
+
+.contact-page {
+    width: calc(100vw - 160px - 603px);
+    margin: 0 auto; 
+}
+
+.contact {
+    &-text {
+        font-family: $sans;
+        text-align: center;
+        margin-top: 69px;
+        margin-bottom: 67px;
+    }
+    &-form {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 490px;
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        &__text {
+            font-family: $sans;
+            font-size: 12px;
+            &-need {
+                color: #FF0000;
+            }
+        }
+        &__input {
+            background-color: #E0E0E0;
+            line-height: 28px;
+            width: 344px;
+            border-radius: 2px;
+            &-big {
+                line-height: 168px;
+            }
+        }
+    }
+}
+
+.submitbtn-wrap {
+    width: 490px;
+    margin: 0 auto;
+}
+
+
+.submit-btn {
+    margin-left: 210px;
+    margin-top: 72px;
+    margin-bottom: 100px;
+}
+
+.section {
+    margin-bottom: 288px;
+    @include mq(sp){
+        margin-bottom: 96px;
+    }
+}

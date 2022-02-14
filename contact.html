@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOODEN STUDIO</title>
+    <!-- WEBフォント -->
+    <link rel="stylesheet" href="https://use.typekit.net/kax0gtq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos.css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- vegas.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vegas@2.5.4/dist/vegas.min.css">
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- jQuery_ -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- aos.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- vegas.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vegas@2.5.4/dist/vegas.min.js"></script>
+    <!-- iscroll.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+    <script src="./js/common.js"></script>
+</head>
+
+<body class="drawer drawer--right">
+    <div class="page-wrap">
+        <header>
+            <div class="sp-header">
+                <h1>
+                    <a href="index.html"><img src="./img/woodenStudio_logo.png" alt="" class="sp-header__logo"></a>
+                </h1>
+                <div class="hamburger drawer-toggle drawer-hamburger">
+                    <span class="drawer-hamburger-icon"></span>
+                </div>
+                <nav class="drawer-nav" role="navigation">
+                    <ul class="drawer-menu">
+                        <li><a class="drawer-menu-item" href="index.html#products">Products</a></li>
+                        <li><a class="drawer-menu-item" href="index.html#recommend">Recommend</a></li>
+                        <li><a class="drawer-menu-item" href="index.html#concept">Concept</a></li>
+                        <li><a class="drawer-menu-item" href="index.html#news">News</a></li>
+                        <li><a class="drawer-menu-item" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="sns-link">
+                        <a href="" class="sns-link__icon"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="sns-link__icon"><i class="fab fa-twitter"></i></a>
+                        <a href="" class="sns-link__icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="contact-vidual">
+            <p class="contact-title__sub">お問い合わせ</p>
+            <h1 class="contact-title__main">Contact</h1>
+        </div>
+        <main>
+            <section class="contact-page">
+                <p class="contact-text">お問い合わせありがとうございます。<br>
+                    以下のフォームよりオーダーメイドのご依頼又は<br>
+                    お問い合わせ内容を入力して送信して下さい。</p>
+                <div class="contact-form">
+                    <p class="contact-form__text">お名前<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">ふりがな<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">電話番号<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">メールアドレス<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">郵便番号</p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">住所<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">件名<span class="contact-form__text-need">*</span></p>
+                    <input type="text" class="contact-form__input">
+                </div>
+                <div class="contact-form">
+                    <p class="contact-form__text">お問い合わせ内容<span class="contact-form__text-need">*</span></p>
+                    <input type="text" rows="6" class="contact-form__input contact-form__input-big">
+                </div>
+                <div class="submitbtn-wrap">
+                    <a href="" class="btn btn-primary submit-btn">送信</a>
+                </div>
+            </section>
+        </main>
+        <header>
+            <div class="header">
+                <h1 class="header__logo">
+                    <a href="index.html">
+                        <img src="./img/woodenStudio_logo.png" alt="WOODEN STUDIOのロゴ">
+                    </a>
+                </h1>
+                <nav>
+                    <ul class="header-nav">
+                        <li class="header-nav__link"><a href="index.html#products">Products</a></li>
+                        <li class="header-nav__link"><a href="index.html#recommend">Recommend</a></li>
+                        <li class="header-nav__link"><a href="index.html#concept">Concept</a></li>
+                        <li class="header-nav__link"><a href="index.html#news">News</a></li>
+                        <li class="header-nav__link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="sns-link">
+                    <a href="" class="sns-link__icon sns-link__icon--primary"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="sns-link__icon sns-link__icon--primary"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="sns-link__icon sns-link__icon--primary"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <footer>
+        <div class="footer">
+            <a href="index.html">
+                <h1 class="footer__logo">WOODEN STUDIO</h1>
+            </a>
+            <nav>
+                <ul class="footer-nav">
+                    <li class="footer-nav__link"><a href="index.html#products">Products</a></li>
+                    <li class="footer-nav__link"><a href="index.html#recommend">Recommend</a></li>
+                    <li class="footer-nav__link"><a href="index.html#concept">Concept</a></li>
+                    <li class="footer-nav__link"><a href="index.html#news">News</a></li>
+                </ul>
+            </nav>
+            <div class="footer-contact">
+                <div class="footer-mail">
+                    <i class="footer-mail__icon far fa-envelope"></i>
+                    <a href="" class="footer-mail__link">Contact</a>
+                </div>
+                <div class="sns-link">
+                    <a href="" class="sns-link__icon"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="sns-link__icon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="sns-link__icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="information">
+                <p class="information__text">〒000–0000　北海道江別市大麻東町13–6</p>
+                <p class="information__text">平日 10:00 – 19:00　土日 10:00 – 18:00<span class="mobile-none">　</span><br
+                        class="pc-none">
+                    祝日・年末年始休み</p>
+            </div>
+            <div class="copyrights">
+                Copyright ©︎ WOODEN STUDIO All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
